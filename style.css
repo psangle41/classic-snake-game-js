@@ -1,0 +1,97 @@
+:root {
+  --pink: #da7a9c;
+  --violet: #854063;
+  --beige: #eecdb3;
+  --darkBrown: #492a39;
+  --white: #ebdedc;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  background-color: #492a39;
+  color: var(--beige);
+  margin-top: -50px;
+  padding: 5px;
+}
+
+#board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  margin: 10px;
+}
+
+.board-border-1 {
+  border: solid 10px var(--pink);
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px var(--pink);
+}
+.board-border-2 {
+  border: solid 10px var(--violet);
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 10px var(--violet);
+}
+
+#instruction-text {
+  position: absolute;
+  top: 40%;
+  color: #333;
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 30px;
+  margin: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  color: #854063;
+}
+
+#highScore {
+  color: var(--darkBrown);
+}
+
+#score,
+#highScore,
+#gameOver {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.snake {
+  border: 1px solid var(--darkBrown);
+  background-color: var(--darkBrown);
+  position: relative;
+}
+
+.eye {
+  width: 5px;
+  height: 5px;
+  background-color: var(--beige);
+  top: 5px;
+  right: 5px;
+  position: absolute;
+}
+
+.food {
+  border: 7px solid var(--darkBrown);
+}
